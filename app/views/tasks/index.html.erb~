@@ -1,0 +1,41 @@
+<script>
+if ($(':checkbox').checked) { $(':checkbox').attr('disabled', true)}
+
+
+</script>
+<hr>
+
+
+
+<h1>My Tasks</h1>
+
+<table>
+  <tr>
+    <th>details</th>
+    <th>completion date</th>
+    
+
+  </tr>
+
+<% @tasks.each do |t| %>
+  <tr>
+<% if t.status == false %>
+<%= form_for t do |ft| %>
+    <td> <%= ft.check_box :status, :onclick => "this.form.submit();" %></td>
+<% end %>
+<% else %>
+<td> Completed</td>
+<% end %>
+    <td><%= t.detail %></td>
+    <td><%= t.completion %></td>
+    
+    <td><%= link_to 'Destroy', t, confirm: 'Are you sure?', method: :delete %></td>
+
+  </tr>
+<% end %>
+</table>
+
+
+
+<%= link_to 'New Task', new_task_path %>
+

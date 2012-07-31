@@ -1,0 +1,13 @@
+Welcome <%= @user %>,
+<br />
+===============================================
+<br />
+A task has been deleted
+<br />
+Details of task: <%= @task.detail %>
+<br />
+Completion date of tasks<%= @task.completion %>
+<br />
+
+ 
+

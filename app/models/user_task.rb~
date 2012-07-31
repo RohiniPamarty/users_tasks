@@ -1,0 +1,3 @@
+class UserTask < ActiveRecord::Base
+  # attr_accessible :title, :body
+end
