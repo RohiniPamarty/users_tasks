@@ -9,14 +9,17 @@ if ($(':checkbox').checked) { $(':checkbox').attr('disabled', true)}
 
 <h1>My Tasks</h1>
 
-<table>
-  <tr>
+<table class="table table-striped">
+  <thead>
+   <tr>
     <th>Status of project </th>
     <th>details</th>
     <th>completion date</th>
     
 
   </tr>
+</thead>
+<tbody>
 
 <% @tasks.each do |t| %>
   <tr>
@@ -29,14 +32,16 @@ if ($(':checkbox').checked) { $(':checkbox').attr('disabled', true)}
 <% end %>
     <td><%= t.detail %></td>
     <td><%= t.completion %></td>
+
     
     <td><%= link_to 'Destroy', t, confirm: 'Are you sure?', method: :delete %></td>
 
   </tr>
 <% end %>
+</tbody>
 </table>
 
 
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task', new_task_path, :class => 'btn btn-primary' %>
 
