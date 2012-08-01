@@ -1,0 +1,19 @@
+= form_for @task, :html => { :class => 'form-horizontal' }  do |f|
+  %fieldset
+    %legend New Task
+    .control-group
+      = f.label :detail, :class => 'control-label'
+      .controls
+        = f.text_area :detail, :cols => 60, :rows => 2
+    .control-group
+      = f.label :completion, :class => 'control-label'
+      .controls
+        = f.date_select :completion, :order => [:day, :month, :year]
+    .control-group
+      %label.control-label
+        Add users
+      .controls
+        = f.collection_select :user_ids, User.find(:all), :id, :email,{}, { :multiple => true, :size=>6 }
+        %br/
+    .form-actions
+      = f.submit nil, :class => 'btn btn-primary'

@@ -23,6 +23,8 @@ end
 gem 'jquery-rails'
 gem 'therubyracer'
 gem 'execjs'
+gem "haml-rails"
+
 gem 'omniauth-openid'
 gem 'devise'
 gem 'twitter-bootstrap-rails'

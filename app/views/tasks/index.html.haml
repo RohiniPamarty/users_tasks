@@ -1,0 +1,21 @@
+%hr
+  %h1 My Tasks
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Status of project
+        %th details
+        %th completion date
+    %tbody
+      - @tasks.each do |t|
+        %tr
+          - if t.status == false
+            = form_for t do |ft|
+              %td
+                = ft.check_box :status, :onclick => "this.form.submit();"
+          - else
+            %td Completed
+          %td= t.detail
+          %td= t.completion
+          %td= link_to 'Destroy', t, confirm: 'Are you sure?', method: :delete
+  = link_to 'New Task', new_task_path, :class => 'btn btn-primary'
