@@ -8,7 +8,7 @@ rvm:
   - rbx-18mode
   - rbx-19mode
 # uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+ script: rake db:migrate
 env:
   global:
     - secure: "I24UnPkeENS7W9QZan+HTxISqQJgwPahqiAgF/uw07nWKEwZUTUkRbYcHh1B\n3gPXahRVlfGgcndN9I33Tf5tObicSvgHb1s4/1kKe4kqx+DuM8tD0UsS2it0\njg6fD5gjdbaDUqzeya98TC8bD8j0wFg1QaX3NhE+Z4zFawlXIZ4="
