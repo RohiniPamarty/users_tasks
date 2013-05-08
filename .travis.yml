@@ -8,9 +8,10 @@ rvm:
   - rbx-18mode
   - rbx-19mode
 # uncomment this line if your project needs to run something other than `rake`:
- script: rake db:migrate
+# script: rake db:migrate
 env:
   global:
     - secure: "I24UnPkeENS7W9QZan+HTxISqQJgwPahqiAgF/uw07nWKEwZUTUkRbYcHh1B\n3gPXahRVlfGgcndN9I33Tf5tObicSvgHb1s4/1kKe4kqx+DuM8tD0UsS2it0\njg6fD5gjdbaDUqzeya98TC8bD8j0wFg1QaX3NhE+Z4zFawlXIZ4="
     - secure: "EYAH2IFtunznEKQxe7ck9DoOiAmMJLfGgA0a61bxVkmJ3Dus0I0sG1X64Ggs\n4D/jIeuo+G7rWbyfKrAmEVWxN3onCBQ2jJITu9cqeeh1ZHdV9JKC59WnYuPJ\nFeCorJ+DAB/7Tt4QgHUd6hmWlB1PHUJNXY47vKa9shYkUGNcdh4="
+    - DB=sqlite
 
